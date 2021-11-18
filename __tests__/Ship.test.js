@@ -21,3 +21,11 @@ describe('Ship', () => {
     expect(ship.startingPort).toBeFalsy();
   });
 });
+
+describe('Ship', () => {
+  it('change the state of Ship with startingPort Property', () => {
+    const calais = new Port('Calais');
+    ship.dock(calais);
+    expect(ship.startingPort).toBe(calais);
+  });
+});

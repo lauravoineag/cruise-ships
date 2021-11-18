@@ -1,14 +1,14 @@
 const Port = require('../src/Port');
-const port = new Port('Dover');
+const dover = new Port('Dover');
 
 describe('Port', () => {
   it('can be instantiated', () => {
-    expect(port).toBeInstanceOf(Object);
+    expect(dover).toBeInstanceOf(Object);
   });
 });
 
 describe('Port', () => {
   it('has a name', () => {
-    expect(port.name).toEqual('Dover');
+    expect(dover.name).toEqual('Dover');
   });
 });

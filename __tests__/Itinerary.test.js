@@ -1,6 +1,6 @@
-const Itinerary = require('../src/Itinerary');
-const Port = require('../src/Port');
-const Ship = require('../src/Ship');
+const Itinerary = require('../src/Itinerary.js');
+const Port = require('../src/Port.js');
+const Ship = require('../src/Ship.js');
 const dover = new Port('Dover Port');
 const calais = new Port('Calais');
 const itinerary = new Itinerary([dover, calais]);
@@ -26,4 +26,5 @@ it('can set sail', () => {
   ship.setSail();
 
   expect(ship.currentPort).toBeFalsy();
+  expect(itinerary.ports).toEqual([dover, calais]);
 });
